@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS | Grounding</title>
+</head>
+<body>
+<p id="one"></p>
+<p id="two"></p>
+<p id="three"></p>
+<p id="four"></p>
+<p id="five"></p>
+<p id="six"></p>
+<p id="seven"></p>
+<p id="eight"></p>
+
+<script>
+/* Create a JavaScript program that can produce some kind of output on the screen. Use it as a basis for further exercises (tip: use LiveCoding examples from day 3 JavaScript Pre-Work materials. ) */
+
+document.getElementById("one").innerHTML = "Ik ben vandaag niet goed gezinnt.";
+
+</script>
+
+<script>
+/* In JavaScript, you can use .slice(start, end) command to extract a part of a string. Extract following strings from the source "This is a simple way of
+learning strings" and store them in separate variables
+
+"This"  
+"simple way"
+"Learning"
+
+Display those variables on the screen. Use Google to find more information (with "JavaScript slice example", for instance) if you are not sure how to proceed. */	
+
+var zin0 = "This is a simple way of learning strings";
+
+var zin = zin0.split(' ');
+	console.log(zin);
+
+var zin2 = zin.slice(0, 1);
+
+document.getElementById("two").innerHTML = zin2;
+
+var simple = zin.slice(3, 5);
+
+document.getElementById("three").innerHTML = simple;
+
+var learning = zin.slice(6, 7);
+
+document.getElementById("four").innerHTML = learning;
+</script>
+
+<script>
+/* Create a program  that starts with this line:
+var myName;
+And then try to print that variable on the screen (or console). Find an explanation for the result that you are getting. Why do you think variables have the name that has something with the word "vary"?
+
+Create a program that stores the number of seconds in a minute in one variable, and number of minutes in an hour in  a second variable. Use those variables to compute the number of seconds in an hour.
+
+Expand the previous example to compute the number of seconds in a year. */	
+
+var myName = "Sabine";
+document.write(myName);
+
+function secHr () {
+	var min = 60;
+	var hr = 60;
+	return min * hr;
+}
+secHr();
+
+document.write("<br>");
+document.write("<br>");
+document.write("Seconds in an hour:  ");
+document.write(secHr());
+
+function secyr () {
+	var min = 60;
+	var hr = 60;
+	var yr = 365;
+	return min * hr * yr;
+}
+secyr();
+
+document.write("<br>");
+document.write("<br>");
+document.write("Seconds in an year:  ");
+document.write(secyr());
+</script>
+
+<script>
+/* Operators
+Create a variable with code  
+
+var myNumber = 5; 
+Now, use the operators "++" and "--" like:
+
+myNumber++;
+myNumber++;
+myNumber--;
+myNumber--;
+myNumber--;
+
+Between all those steps, print the variable myNumber on the screen and figure out how does the operator works.
+
+Try following code:
+
+var x = 10;
+x = x + 5; 
+x += 5;
+x = x - 3; 
+x += 3; 
+Print "x" on the screen between the steps; once you figure out how does "+=" and "-=" operator works, find out more examples with those operators on Internet. */	
+
+document.write("<br>");
+var myNumber = 5; 
+document.write("<br>");
+document.write (myNumber);
+
+var myNumber1 = myNumber++;
+document.write("<br>");
+document.write (myNumber);
+
+var myNumber2 = myNumber++;
+document.write("<br>");
+document.write (myNumber);
+
+var myNumber3 = myNumber--;
+document.write("<br>");
+document.write (myNumber);
+
+var myNumber4 = myNumber--;
+document.write("<br>");
+document.write (myNumber);
+
+var myNumber5 = myNumber--;
+document.write("<br>");
+document.write (myNumber);
+
+
+document.write("<br>");
+document.write("<br>");
+
+var x = 10;
+document.write("<br>");
+document.write (x);
+
+x = x + 5; 
+document.write("<br>");
+document.write (x);
+
+x += 5;
+document.write("<br>");
+document.write (x);
+
+x = x - 3; 
+document.write("<br>");
+document.write (x);
+
+x += 3; 
+document.write("<br>");
+document.write (x);
+</script>
+
+<script>
+/* More on Strings  -  Try following code:
+
+var x = "Code";
+var y = "Factory";
+var xLen = x.length;
+var yLen = y.length;
+var allLen = xLen + yLen;
+What is the value of "allLen"? Why? Can you produce the same result with less lines of code? How? What is the ultimate "condensed lines" solution, given that you need to work with two strings that you do not previously know?
+
+Find informations on the Internet regarding two JavaScript functions:
+
+toUpperCase();
+toLowerCase();
+
+Use them on the string "thiS iS suCh a loWEly DAY since i LOVE jaVAsCript"
+*/	
+
+document.write("<br>");
+document.write("<br>");
+
+var x = "Code";
+document.write("<br>");
+document.write (x);
+
+var y = "Factory";
+document.write("<br>");
+document.write (y);
+
+var xLen = x.length;
+document.write("<br>");
+document.write (xLen);
+
+var yLen = y.length;
+document.write("<br>");
+document.write (yLen);
+
+var allLen = xLen + yLen;
+document.write("<br>");
+document.write (allLen);
+
+var allLeng = x.length + y.length;
+document.write("<br>");
+document.write (allLen);
+
+document.write("<br>");document.write("<br>");
+
+
+var js = "thiS iS suCh a lovEly DAY since i LOVE jaVAsCript"
+document.write("<br>");
+document.write (js);
+
+var uc = js.toUpperCase();
+document.write("<br>");
+document.write (uc);
+
+var lc = js.toLowerCase();
+document.write("<br>");
+document.write (lc);
+
+document.write("<br>");document.write("<br>");
+
+/*Use those  in combination with slice() function to produce a string that is stored in another variable:
+
+The value of that variable should be:
+
+"This is such a lovely day since i love javascript" (tip: just first letter is transformed in caps, other are small)
+
+"This is such a lovely day since I love JavaScript" (tip: several letters are sliced and transformed to uppercase from a lowercase source)*/
+
+function cap(lc) {
+  return lc.charAt(0).toUpperCase() + lc.slice(1);
+}
+document.write("<br>");
+document.write (cap(lc));
+
+var lcA = lc.split(' ');
+	console.log(lcA);
+
+var one = lcA[0].charAt(0).toUpperCase() + lcA[0].slice(1);
+var two = lcA[1].charAt(0).toUpperCase() + lcA[1].slice(1);
+var three = lcA[2].charAt(0).toUpperCase() + lcA[2].slice(1);
+var four = lcA[3].charAt(0).toUpperCase() + lcA[3].slice(1);
+var five = lcA[4].charAt(0).toUpperCase() + lcA[4].slice(1);
+var six = lcA[5].charAt(0).toUpperCase() + lcA[5].slice(1);
+var seven = lcA[6].charAt(0).toUpperCase() + lcA[6].slice(1);
+var eight = lcA[7].charAt(0).toUpperCase() + lcA[7].slice(1);
+var nine = lcA[8].charAt(0).toUpperCase() + lcA[8].slice(1);
+var ten = lcA[9].charAt(0).toUpperCase() + lcA[9].slice(1);
+
+document.write("<br>" + one + " " + two + " " + three + " " + four + " " + five + " " + six + " " + seven + " " + eight + " " + nine + " " + ten);
+
+/* Better alternative as a for loop!! */
+
+var bigString = "<br>";
+for (var i = 0; i < lcA.length; i++) {
+	bigString = bigString + lcA[i].charAt(0).toUpperCase() + lcA[i].slice(1) + " ";
+}
+document.write(bigString);
+
+</script>
+
+<script>
+/* 7. Boolean & logical expressions*/
+document.write("<br>");
+document.write("<br>");
+
+var alreadyWashedMyHands = true; 
+var didIForgotToBuySomeFood = true; 
+var isItAlreadyBreakTime = false;
+
+if (alreadyWashedMyHands = false) {
+	document.write("Je mag aan tafel komen.")
+} else {
+	document.write("Kleine viezepoot! Was je voor het eten.")
+}
+document.write("<br>");
+document.write("<br>");
+
+if (didIForgotToBuySomeFood = false) {
+	document.write("Ooei, we gaan pizza bestellen.")
+} else {
+	document.write("We gaan groentensoep eten.")
+}
+document.write("<br>");
+document.write("<br>");
+
+if (isItAlreadyBreakTime = true) {
+	document.write("Yeah, tijd voor een tussendoortje!")
+} else {
+	document.write("We moeten nog even verder.")
+}
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("Wanneer is het eten klaar?")
+document.write("<br>");
+
+
+var alreadyWashedMyHands = true; 
+var didIForgotToBuySomeFood = true; 
+var isItAlreadyBreakTime = true;
+
+var isLunchStarting = alreadyWashedMyHands && isItAlreadyBreakTime;
+document.write(isLunchStarting);
+
+
+/* Switch is not the right method for this 
+switch (isLunchStarting == true) {
+	case(isLunchStarting == (alreadyWashedMyHands = true) && (isItAlreadyBreakTime = true)):
+		document.write("Ga maar lekker aan tafel!");
+		break;
+	case(isLunchStarting == (alreadyWashedMyHands = true) && (isItAlreadyBreakTime = false)):
+		document.write("We moeten nog even verder.");
+		break;
+	case(isLunchStarting == (alreadyWashedMyHands = false) && (isItAlreadyBreakTime = true)):
+		document.write("Kleine viezepoot! Was je voor het eten.");
+		break;
+	case(isLunchStarting == (alreadyWashedMyHands = false) && (isItAlreadyBreakTime = false)):
+		document.write("Werk nog maar een beetje en was soms je handen.");
+}
+*/
+
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+/* Correct logic, somewhere there is wrong syntax
+if (alreadyWashedMyHands = true && isItAlreadyBreakTime = true){
+	document.write("Ga maar lekker aan tafel!")
+} else if (alreadyWashedMyHands = true && isItAlreadyBreakTime = false){
+	document.write("We moeten nog even verder.")
+} else if (alreadyWashedMyHands = false && isItAlreadyBreakTime = true) {
+	document.write("Kleine viezepoot! Was je voor het eten.")
+} else (alreadyWashedMyHands = false && isItAlreadyBreakTime = false) {
+	document.write("Werk nog maar een beetje en was soms je handen.")
+}*/
+
+</script>
+
+<script>
+/* */
+	
+</script>
+
+<script>
+/* */
+	
+</script>
+
+</body>
+</html>
